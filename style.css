@@ -1,0 +1,480 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: white;
+    padding: 10px 20px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2; /* Place the navbar above the slider */
+}
+
+.heading{
+    font-size: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    color: white;
+    padding: 13rem 30rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2; /* Place the navbar above the slider */
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-item {
+    margin-right: 20px;
+}
+
+.off {
+    height: 1rem;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(121, 151, 148);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-content {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+.center{
+    text-align: center;
+}
+
+
+
+/*  */
+
+/* Your existing styles above */
+
+.card-slider-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-top: 20px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    position: relative;
+}
+
+.card-slider {
+    display: flex;
+    justify-content: flex-start;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card {
+    flex: 0 0 calc(33.33% - 20px); /* Three cards per slide with some margin */
+    margin: 0 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+}
+
+
+/* Import Google font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+      min-height: 100vh;
+}
+.wrapper {
+    margin-top: 50px;
+  width: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  transform: translateY(-50%);
+  transition: transform 0.1s linear;
+}
+.wrapper i:active{
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child{
+  left: -22px;
+}
+.wrapper i:last-child{
+  right: -22px;
+}
+.wrapper .carousel{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+    
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+/* .carousel .card .img {
+  background: #8B53FF;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+} */
+.card .img img {
+    
+  /* width: 140px;
+  height: 140px; */
+  /* border-radius: 50%; */
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: -40px;
+}
+.carousel .card span {
+  color: #6A6D78;
+  font-size: 1rem;
+}
+
+/*  */
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-side {
+    flex: 1;
+    padding: 20px;
+}
+
+.right-side {
+    flex: 1;
+    padding: 40px;
+}
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #d86846;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.bg-size{
+    font-size: 40px;
+    padding: 20px;
+}
+
+
+        /* CSS for the layout */
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .left-side {
+            flex: 1;
+        }
+        
+        .right-side {
+            flex: 1;
+            text-align: center;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        h1 {
+            font-size: 24px;
+        }
+        
+        p {
+            font-size: 16px;
+        }
+        
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+.bg-h1{
+    margin-left: 15%;
+    font-size: 40px;
+    font-family:fantasy;
+}
+
+.bg-p{
+    margin-left: 10%;
+    width: 60rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+a{
+    margin-left: 15%;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+.one-shot{
+    background-color:rgb(223, 249, 249) ;
+    padding: 5%;
+}
+
+.horizontal-carousel {
+    margin-top: 5%;
+    margin-left: 3%;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    overflow-x: scroll;
+    white-space: nowrap;
+    gap: 20px;
+    width: 100%; /* Ensure the carousel takes the full width of its container */
+}
+
+.horizaltal-div{
+    padding: 5%;
+    background-color:antiquewhite;
+}
+
+.carousel-item {
+    flex: 0 0 calc(33.333% - 20px);
+    scroll-snap-align: center;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item-img {
+    overflow: hidden;
+    max-height: 250px;
+}
+
+.item-img img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Add the hover effect for the zoom */
+.carousel-item:hover .item-img img {
+    transform: scale(1.1);
+}
+
+/* Optional: Add styling for the p and h2 elements */
+.carousel-item p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.carousel-item h2 {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.anchor{
+    margin-left: -30%;
+}
+
+
+footer{
+    background-color: black;
+    height: 500px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section h1, .footer-section h2 {
+    font-size: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.subscribe-section {
+    text-align: center;
+    padding: 20px;
+}
+
+.subscribe-section input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+
+.subscribe-section label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.subscribe-section button {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Add styling for social media icons as needed */
+
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+
